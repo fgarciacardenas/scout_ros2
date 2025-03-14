@@ -37,6 +37,8 @@ def generate_launch_description():
         executable='scout_base_node',
         output='screen',
         emulate_tty=True,
+        respawn=True,
+        respawn_delay=0.1,
         parameters=[{
                 'use_sim_time': launch.substitutions.LaunchConfiguration('use_sim_time'),
                 'port_name': launch.substitutions.LaunchConfiguration('port_name'),                
